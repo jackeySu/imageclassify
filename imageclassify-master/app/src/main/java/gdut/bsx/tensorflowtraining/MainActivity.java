@@ -266,14 +266,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_choose_picture :
-                choosePicture();
-                break;
-            case R.id.iv_take_photo :
-                takePhoto();
-                break;
-            default:break;
+        if (view.getId() == R.id.iv_choose_picture) {
+            choosePicture();
+        } else if (view.getId() == R.id.iv_take_photo) {
+            takePhoto();
         }
     }
 
